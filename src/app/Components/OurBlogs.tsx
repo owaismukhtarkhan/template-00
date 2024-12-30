@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface BlogCardProps {
   imageUrl: string;
@@ -61,10 +62,12 @@ const Header: React.FC = () => {
 
 const ViewAllButton: React.FC = () => {
   return (
-    <div className="relative w-32 h-12 cursor-pointer group">
-      <p className="text-lg font-medium text-black text-center">View All Post</p>
-      <div className="absolute bottom-0 left-1.5 w-28 h-[1px] bg-black transition-all duration-300 group-hover:w-full group-hover:left-0" />
-    </div>
+    <Link href="/blog">
+      <div className="relative w-32 h-12 cursor-pointer group">
+        <p className="text-lg font-medium text-black text-center">View All Post</p>
+        <div className="absolute bottom-0 left-1.5 w-28 h-[1px] bg-black transition-all duration-300 group-hover:w-full group-hover:left-0" />
+      </div>
+    </Link>
   );
 };
 

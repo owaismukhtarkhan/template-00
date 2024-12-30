@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface DoubleTroubleProps {
   leftImage?: string;
@@ -18,10 +19,11 @@ const DoubleTrouble: React.FC<DoubleTroubleProps> = ({
       <div className="flex justify-between gap-[30px]">
         <div className="relative w-[605px] h-[562px]">
           <div className="w-full h-full overflow-hidden">
-            <img 
+            <Image 
               src={leftImage} 
               alt="Side table"
-              className="w-full h-full object-cover"
+              layout="fill"
+              objectFit="cover"
             />
           </div>
           <div className="absolute bottom-[52px] left-[106px]">
@@ -39,10 +41,11 @@ const DoubleTrouble: React.FC<DoubleTroubleProps> = ({
 
         <div className="relative w-[605px] h-[562px]">
           <div className="w-full h-full overflow-hidden">
-            <img 
+            <Image 
               src={rightImage}
               alt="Side table"
-              className="w-full h-full object-cover"
+              layout="fill"
+              objectFit="cover"
             />
           </div>
           <div className="absolute bottom-[52px] left-[106px]">

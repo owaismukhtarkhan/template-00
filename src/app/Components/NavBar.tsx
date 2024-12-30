@@ -39,7 +39,9 @@ const NavBar: React.FC<NavBarProps> = ({
 
         {/* Icons - Right section */}
         <div className="hidden md:flex items-center gap-x-6">
-          <Image src="/account-alert-icon.png" alt="User" width={24} height={24} />
+        <Link href="/myaccount/">
+            <Image src="/account-alert-icon.png" alt="User" width={24} height={24} />
+          </Link>
           <Image src="/search-icon.png" alt="Search" width={24} height={24} />
           <Image src="/heart-icon.png" alt="Heart" width={24} height={24} />
           <Image src="/shopping-cart.png" alt="Cart" width={24} height={24} />
